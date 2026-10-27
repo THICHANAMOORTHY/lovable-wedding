@@ -1,4 +1,5 @@
 import portrait from "@/assets/couple-portrait.png.asset.json";
+import portraitImage from "@/assets/couple-portrait.png";
 import { wedding } from "@/data/weddingDetails";
 import { Divider, Eyebrow, Reveal } from "./Ornaments";
 
@@ -15,7 +16,7 @@ export function CouplePortrait() {
         <Divider className="my-7" />
       </Reveal>
       <Reveal delay={0.15} className="mx-auto max-w-lg">
-        <img src={portrait.url} alt={`Illustrated portrait of ${wedding.groom} and ${wedding.bride}`} width={768} height={1152} loading="lazy" className="h-auto w-full rounded-sm shadow-soft" />
+        <img src={portraitImage || portrait.url} alt={`Illustrated portrait of ${wedding.groom} and ${wedding.bride}`} width={768} height={1152} loading="lazy" className="h-auto w-full rounded-sm shadow-soft" />
       </Reveal>
     </section>
   );
